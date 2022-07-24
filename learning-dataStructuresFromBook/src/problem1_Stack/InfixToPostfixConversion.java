@@ -11,7 +11,6 @@ public class InfixToPostfixConversion {
 	public static String toPostfix(String infix) {
 		char symbol;
 		StringBuilder postfix = new StringBuilder();
-//		String postfix = "";
 		Stack<Character> stack = new Stack<Character>();
 		for (int i = 0; i < infix.length(); i++) {
 			symbol = infix.charAt(i);
