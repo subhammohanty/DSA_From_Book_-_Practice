@@ -1,7 +1,5 @@
 package problem_leetCode_Easy;
 
-import java.util.Iterator;
-
 public class Demo {
 
 	public static void main(String[] args) {
