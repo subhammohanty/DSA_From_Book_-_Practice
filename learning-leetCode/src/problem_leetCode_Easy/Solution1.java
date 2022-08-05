@@ -13,6 +13,22 @@ public class Solution1 {
 		}
 	}
 	
+	public static int[] twoSumOptimise(int[] nums, int target) {
+		if (nums == null) {
+			return null;
+		}
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		for (int i = 0; i < nums.length; i++) {
+			int requiredNumber = target - nums[i];
+			if (map.containsKey(requiredNumber)) {
+				int[] result = { map.get(requiredNumber), i };
+				return result;
+			}
+			map.put(nums[i], i);
+		}
+		return null;
+	}
+
 	public static int[] twoSum(int[] nums, int target) {
 		if (nums == null) {
 			return null;
@@ -29,19 +45,5 @@ public class Solution1 {
 		return result;
 	}
 	
-	public static int[] twoSumOptimise(int[] nums, int target) {
-		if (nums == null) {
-			return null;
-		}
-		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-		for (int i = 0; i < nums.length; i++) {
-			int requiredNumber = target - nums[i];
-			if (map.containsKey(requiredNumber)) {
-				int[] result = { map.get(requiredNumber), i };
-				return result;
-			}
-			map.put(nums[i], i);
-		}
-		return null;
-	}
+
 }
