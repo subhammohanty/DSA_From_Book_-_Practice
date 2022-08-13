@@ -1,15 +1,16 @@
 package problem_leetCode_Easy;
 
-import java.time.LocalDateTime;
-import java.util.Stack;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.IntStream;
 
 public class Demo {
 
 	public static void main(String[] args) {
+		IntStream range = IntStream.range(0, 10);
+		int reduce = range.reduce(0 , (a,b)-> a+b);
+		System.out.println(reduce);
 		
-		LocalDateTime localDateTime = LocalDateTime.now();
-		localDateTime.plusHours(48);
-		LocalDateTime localDateTime2 = LocalDateTime.now();
 	}
 
 }
