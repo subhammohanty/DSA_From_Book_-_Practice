@@ -10,7 +10,6 @@ public class MaximumRepetedElement {
 		System.out.println(maximumRepeate(A));
 	}
 
-
 	public static int maximumRepeate(int[] A) {
 		if (A == null) {
 			return 0;
