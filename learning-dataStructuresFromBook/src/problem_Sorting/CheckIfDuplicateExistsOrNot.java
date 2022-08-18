@@ -1,4 +1,4 @@
-package problem_Seraching;
+package problem_Sorting;
 
 import java.util.Arrays;
 
