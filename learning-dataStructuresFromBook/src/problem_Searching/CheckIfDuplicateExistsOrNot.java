@@ -1,4 +1,4 @@
-package problem_Sorting;
+package problem_Searching;
 
 import java.util.Arrays;
 
