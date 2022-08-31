@@ -37,6 +37,14 @@ public class ListNode {
 		}
 	}
 	
+	public void display(ListNode head1) {
+		ListNode current = head1;
+		while(current != null) {
+			System.out.println(current.val);
+			current = current.next;
+		}
+	}
+	
 	public ListNode  mergeTwoLists(ListNode h1, ListNode h2) {
 		if(h1 == null && h2 == null) {return null;}
 		if(h1 == null && h2 != null) {return h2;}
@@ -69,5 +77,32 @@ public class ListNode {
 			lastNode.next = h2.next;
 		}
 		return resNode;
+	}
+	
+	public  void removeElements(ListNode head, int val) {
+		if(head == null){
+            return;
+        }
+        if(head.val == val){
+            head = head.next;
+        }
+        
+        ListNode current = head;
+        ListNode prev = current;
+        while(current != null){
+            if(current.val == val && prev != current){
+                prev.next = current.next;
+                current = current.next;
+            }else if(current.val == val && prev == current){
+                prev.next = current.next;
+                current = current.next;
+            }
+            else{
+                prev = current;
+                current = current.next;
+            }
+            
+        }
+//        return head;
 	}
 }
