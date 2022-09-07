@@ -105,4 +105,18 @@ public class ListNode {
         }
 //        return head;
 	}
+	public  ListNode reverse(ListNode head) {
+		if(head == null) {
+			return null;
+		}
+		ListNode curr = head;
+		ListNode prev = null;
+		while(curr != null) {
+			ListNode next = curr.next;
+			curr.next = prev;
+			prev = curr;
+			curr = next;
+		}
+		return prev;
+	}
 }
