@@ -1,20 +1,19 @@
 package problem_leetCode_Easy;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.stream.IntStream;
 
 public class Demo {
 
 	public static void main(String[] args) {
-		List<Integer> list = Arrays.asList(4,5);
-		List<String> res = new ArrayList<String>();
-		res.add(list.get(0).toString());
-		res.add("->");
-		res.add(list.get(list.size()-1).toString());
-		System.out.println(res);
-	}
-	
-	
-	
+		int num = 11;
+		int sum = 0;
+		while(num != 0) {
+			sum += num%10;
+			num = num / 10;
+		}
+		System.out.println(sum);
+	}	
 }
